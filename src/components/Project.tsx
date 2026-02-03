@@ -1,70 +1,119 @@
 import React from "react";
-import mock01 from '../assets/images/mock01.png';
-import mock02 from '../assets/images/mock02.png';
-import mock03 from '../assets/images/mock03.png';
-import mock04 from '../assets/images/mock04.png';
-import mock05 from '../assets/images/mock05.png';
-import mock06 from '../assets/images/mock06.png';
-import mock07 from '../assets/images/mock07.png';
-import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
 import '../assets/styles/Project.scss';
+import imgEmailing from '../assets/images/emailing.png';
+import imgBomberman from '../assets/images/bomberman.png';
+import imgCasseBrique from '../assets/images/casse-brique.png';
+import imgTowerDefense from '../assets/images/tower-defense.png';
 
 function Project() {
     return(
-    <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
+    <div className="projects-container" id="projets">
+        <h1>Mes Projets</h1>
+        <p className="section-intro">
+            Projets réalisés durant ma formation et mes expériences professionnelles.
+        </p>
+        
         <div className="projects-grid">
-            <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
+            {/* Projet 1 - Site Emailing IUT */}
+            <div className="project" id="projet-emailing">
+                <div className="project-image">
+                    <img src={imgEmailing} className="zoom" alt="MailingIUT" width="100%"/>
+                </div>
+                <h2>MailingIUT - Site d'Emailing</h2>
+                <div className="project-context">
+                    <p><strong>Contexte :</strong> Projet pour la responsable communication de l'IUT</p>
+                    <p><strong>Besoin :</strong> Outil de gestion et d'envoi d'emails professionnels</p>
+                    <p><strong>Solution :</strong> Application web avec tableau de bord, gestion des campagnes et statistiques</p>
+                    <p><strong>Résultat :</strong> Communication efficace avec étudiants et partenaires</p>
+                </div>
+                <div className="project-skills">
+                    <strong>Compétences :</strong>
+                    <a href="#comp-dev-web">Développement Web</a>
+                    <a href="#comp-bdd">Bases de Données</a>
+                    <a href="#comp-gestion">Gestion de Projet</a>
+                </div>
+                <div className="project-tech">
+                    <span className="tech-tag">Python</span>
+                    <span className="tech-tag">Vue.js</span>
+                    <span className="tech-tag">Django</span>
+                </div>
             </div>
-            <div className="project">
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><h2>High Speed Chase</h2></a>
-                <p>Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy.</p>
+
+            {/* Projet 2 - Bomberman 3D */}
+            <div className="project" id="projet-bomberman">
+                <div className="project-image">
+                    <img src={imgBomberman} className="zoom" alt="Bomberman 3D" width="100%"/>
+                </div>
+                <h2>Bomberman 3D</h2>
+                <div className="project-context">
+                    <p><strong>Contexte :</strong> Projet personnel de développement de jeux</p>
+                    <p><strong>Besoin :</strong> Recréer Bomberman en 3D avec fonctionnalités multijoueur</p>
+                    <p><strong>Solution :</strong> Développement complet sur Godot avec physique et IA</p>
+                    <p><strong>Résultat :</strong> Jeu jouable avec plusieurs niveaux et modes de jeu</p>
+                </div>
+                <div className="project-skills">
+                    <strong>Compétences :</strong>
+                    <a href="#comp-jeux">Développement Jeux</a>
+                    <a href="#comp-gestion">Gestion de Projet</a>
+                </div>
+                <div className="project-tech">
+                    <span className="tech-tag">Godot Engine</span>
+                    <span className="tech-tag">GDScript</span>
+                    <span className="tech-tag">3D</span>
+                </div>
+                <div className="project-links">
+                    <a href="https://devugo.itch.io/td2-bomberman?secret=8IpOHi8ZdE8RICh48ctVWM0YYU" target="_blank" rel="noopener noreferrer" className="btn-play">🎮 Jouer sur itch.io</a>
+                </div>
             </div>
-            <div className="project">
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><h2>Astro Raiders</h2></a>
-                <p>Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace.</p>
+
+            {/* Projet 3 - Casse-Brique 2D */}
+            <div className="project" id="projet-casse-brique">
+                <div className="project-image">
+                    <img src={imgCasseBrique} className="zoom" alt="Casse-Brique 2D" width="100%"/>
+                </div>
+                <h2>Casse-Brique 2D</h2>
+                <div className="project-context">
+                    <p><strong>Contexte :</strong> Apprentissage du développement de jeux 2D</p>
+                    <p><strong>Besoin :</strong> Maîtriser les fondamentaux : physique, collisions, score</p>
+                    <p><strong>Solution :</strong> Jeu avec système de niveaux, power-ups et highscores</p>
+                    <p><strong>Résultat :</strong> Jeu complet avec progression équilibrée</p>
+                </div>
+                <div className="project-skills">
+                    <strong>Compétences :</strong>
+                    <a href="#comp-jeux">Développement Jeux</a>
+                </div>
+                <div className="project-tech">
+                    <span className="tech-tag">Godot Engine</span>
+                    <span className="tech-tag">GDScript</span>
+                    <span className="tech-tag">2D</span>
+                </div>
+                <div className="project-links">
+                    <a href="https://yahyamagaz.itch.io/mon-premier-casse-brique?secret=XgaZTh8WiP306oBoHuNsV2CidJc" target="_blank" rel="noopener noreferrer" className="btn-play">🎮 Jouer sur itch.io</a>
+                </div>
             </div>
-            <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
-            </div>
-            <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
-            </div>
-            <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
-                <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
-            </div>
-            <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
+
+            {/* Projet 4 - Tower Defense TDD */}
+            <div className="project" id="projet-tower-defense">
+                <div className="project-image">
+                    <img src={imgTowerDefense} className="zoom" alt="Tower Defense TDD" width="100%"/>
+                </div>
+                <h2>Tower Defense - TDD</h2>
+                <div className="project-context">
+                    <p><strong>Contexte :</strong> Projet académique de refactoring</p>
+                    <p><strong>Besoin :</strong> Améliorer un jeu existant avec les bonnes pratiques</p>
+                    <p><strong>Solution :</strong> Refactoring avec méthodologie TDD et ajout de fonctionnalités</p>
+                    <p><strong>Résultat :</strong> Code maintenable et testé à 100%</p>
+                </div>
+                <div className="project-skills">
+                    <strong>Compétences :</strong>
+                    <a href="#comp-qualite">Qualité & TDD</a>
+                    <a href="#comp-jeux">Développement Jeux</a>
+                </div>
+                <div className="project-tech">
+                    <span className="tech-tag">TDD</span>
+                    <span className="tech-tag">Tests unitaires</span>
+                    <span className="tech-tag">Refactoring</span>
+                </div>
             </div>
         </div>
     </div>

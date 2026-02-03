@@ -1,6 +1,6 @@
 .vertical-timeline span {
     color: white;
-    font-family: 'Courier Prime', monospace;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .vertical-timeline p {
@@ -9,14 +9,18 @@
 
 .vertical-timeline-element p {
     color: rgb(39, 40, 34);
+    line-height: 1.6;
 }
 
 .vertical-timeline-element h3 {
     color: rgb(39, 40, 34);
+    font-family: 'Poppins', sans-serif;
 }
 
 .vertical-timeline-element h4 {
     color: rgb(39, 40, 34);
+    font-weight: 400;
+    margin-top: 0.3rem;
 }
 
 .vertical-timeline-element span {
@@ -25,10 +29,24 @@
 
 .vertical-timeline-element .vertical-timeline-element-date {
     color: white;
+    font-weight: 500;
+}
+
+.vertical-timeline-element-content {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
 .svg-inline--fa {
     color: white;
+}
+
+#parcours {
+    .items-container {
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+    }
 }
 
 @media screen and (max-width: 1170px) {

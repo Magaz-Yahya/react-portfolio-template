@@ -1,83 +1,120 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faGamepad, faUsers, faLightbulb, faDatabase, faCogs } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+// Technologies Web
+const techWeb = [
+    "HTML", "CSS", "PHP", "Symfony", "Python", "Django", "Vue.js", "Angular"
 ];
 
-const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+// Technologies Jeux Vidéo
+const techJeux = [
+    "Godot Engine", "GDScript", "C#", "Game Design"
 ];
 
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+// Outils & Méthodologies
+const techOutils = [
+    "Git", "GitHub", "VS Code", "TDD", "Méthode Agile"
+];
+
+// Langages de programmation
+const langages = [
+    "Python", "Java", "C#", "PHP", "SQL", "GDScript"
 ];
 
 function Expertise() {
     return (
-    <div className="container" id="expertise">
+    <div className="container" id="competences">
         <div className="skills-container">
-            <h1>Expertise</h1>
+            <h1>Mes Compétences</h1>
+            <p className="section-intro">
+                Compétences acquises au cours de ma formation et de mon alternance. 
+                Ma passion pour la gestion de projet me pousse à vouloir me spécialiser dans ce domaine.
+            </p>
+            
             <div className="skills-grid">
-                <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                <div className="skill" id="comp-gestion">
+                    <FontAwesomeIcon icon={faUsers} size="3x"/>
+                    <h3>Gestion de Projet</h3>
+                    <p>
+                        Ma passion principale depuis la 2ème année. Organisation, planification, 
+                        méthodes agiles et suivi de projets en équipe chez Agileo Automation.
+                    </p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
+                        <span className="chip-title">Outils :</span>
+                        {techOutils.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
                 </div>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                <div className="skill" id="comp-dev-web">
+                    <FontAwesomeIcon icon={faCode} size="3x"/>
+                    <h3>Développement Web</h3>
+                    <p>
+                        Conception d'applications web complètes, du front-end au back-end. 
+                        Exemple : <a href="#projet-emailing">site d'emailing</a> pour l'IUT.
+                    </p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
+                        <span className="chip-title">Technologies :</span>
+                        {techWeb.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
                 </div>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                <div className="skill" id="comp-jeux">
+                    <FontAwesomeIcon icon={faGamepad} size="3x"/>
+                    <h3>Développement Jeux Vidéo</h3>
+                    <p>
+                        Création de jeux 2D/3D avec Godot Engine : <a href="#projet-bomberman">Bomberman 3D</a> et 
+                        <a href="#projet-casse-brique"> casse-brique 2D</a>.
+                    </p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
+                        <span className="chip-title">Technologies :</span>
+                        {techJeux.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill" id="comp-qualite">
+                    <FontAwesomeIcon icon={faCogs} size="3x"/>
+                    <h3>Qualité & Méthodologie</h3>
+                    <p>
+                        Application du TDD et des bonnes pratiques. 
+                        Exemple : <a href="#projet-tower-defense">refactoring Tower Defense</a>.
+                    </p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Outils :</span>
+                        {techOutils.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill" id="comp-communication">
+                    <FontAwesomeIcon icon={faLightbulb} size="3x"/>
+                    <h3>Communication</h3>
+                    <p>
+                        Vulgarisation technique et adaptation aux besoins clients. 
+                        Compétence développée lors de mon alternance.
+                    </p>
+                </div>
+
+                <div className="skill" id="comp-bdd">
+                    <FontAwesomeIcon icon={faDatabase} size="3x"/>
+                    <h3>Bases de Données</h3>
+                    <p>
+                        Conception et administration de BD relationnelles et non relationnelles. 
+                        Modélisation et requêtes SQL optimisées.
+                    </p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Langages :</span>
+                        {langages.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>

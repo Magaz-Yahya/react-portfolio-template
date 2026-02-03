@@ -1,16 +1,12 @@
-.dark-mode .about-section {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
 .about-section {
     display: flex;
-    gap: 30px;
+    gap: 50px;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
     padding: 0px 15%;
-    min-height: 700px;
-    background-image: url("../images/bg-dark.png");
+    min-height: 100vh;
+    background-image: url("../images/bg-light.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -20,15 +16,22 @@
 .about-section .content {
     text-align: left;
     z-index: 2;
+    max-width: 600px;
 
     .social_icons {
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 15px;
         color: white;
+        margin-bottom: 1rem;
 
         svg {
-            font-size: 1.8em;
+            font-size: 2em;
+            transition: transform 0.3s ease;
+        }
+
+        svg:hover {
+            transform: scale(1.2);
         }
     }
 
@@ -36,24 +39,75 @@
         display: none;
     }
 
-    p {
+    .role {
         font-size: 1.5em;
-        margin-block-start: 0px;
+        margin-block-start: 0.5rem;
         margin-block-end: 0px;
+        color: #5000ca;
+        font-weight: 500;
+    }
+
+    .intro {
+        font-size: 1.1em;
+        line-height: 1.7;
+        opacity: 0.9;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     h1 {
-        font-size: 5em;
+        font-size: 4em;
         margin-block-start: 0px;
         margin-block-end: 0px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+
+        a {
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #5000ca;
+            color: white;
+            
+            &:hover {
+                background-color: #6b1adb;
+                transform: translateY(-2px);
+            }
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #5000ca;
+            color: #5000ca;
+
+            &:hover {
+                background-color: #5000ca;
+                color: white;
+            }
+        }
     }
 }
 
 .about-section .image-wrapper {
     z-index: 2;
     img {
-        width: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #5000ca;
+        box-shadow: 0 10px 30px rgba(80, 0, 202, 0.3);
     }
 }
 
@@ -64,6 +118,33 @@
 }
 
 @media screen {
+    @media (max-width: 900px) {
+        .about-section {
+            flex-direction: column;
+            padding: 10% 5%;
+            text-align: center;
+            min-height: auto;
+            padding-top: 100px;
+        }
+
+        .about-section .content {
+            text-align: center;
+
+            .social_icons {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+    }
+
     @media (max-width: 567px) {
         .nav-left{
             padding-top: 20px;

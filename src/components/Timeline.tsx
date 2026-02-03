@@ -1,65 +1,103 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
 
 function Timeline() {
   return (
-    <div id="history">
+    <div id="parcours">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>Mon Parcours</h1>
+        <p className="section-intro">
+          Mon évolution académique et professionnelle.
+        </p>
         <VerticalTimeline>
+          {/* Alternance BUT 3 */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="2025 - 2026"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">Alternance - Développeur</h3>
+            <h4 className="vertical-timeline-element-subtitle">Agileo Automation</h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+              Développement logiciel, travail en équipe, méthodologie agile
             </p>
           </VerticalTimelineElement>
+
+          {/* BUT 3 */}
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2022"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
+            className="vertical-timeline-element--education"
+            date="2025 - 2026"
+            iconStyle={{ background: '#2196F3', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">BUT Informatique - 3ème année</h3>
+            <h4 className="vertical-timeline-element-subtitle">IUT de Blagnac</h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+              Alternance, projets avancés, préparation à l'insertion professionnelle
             </p>
           </VerticalTimelineElement>
+
+          {/* Alternance BUT 2 */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="2024 - 2025"
+            iconStyle={{ background: '#5000ca', color: '#fff' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Alternance - Développeur</h3>
+            <h4 className="vertical-timeline-element-subtitle">Agileo Automation</h4>
             <p>
-              Full-stack Development, API Development, User Experience
+              Première année d'alternance, découverte du monde professionnel
             </p>
           </VerticalTimelineElement>
+
+          {/* BUT 2 */}
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2020"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
+            className="vertical-timeline-element--education"
+            date="2024 - 2025"
+            iconStyle={{ background: '#2196F3', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
+            <h3 className="vertical-timeline-element-title">BUT Informatique - 2ème année</h3>
+            <h4 className="vertical-timeline-element-subtitle">IUT de Blagnac</h4>
             <p>
-              Automation, Data Governance, Statistical Analysis
+              Développement avancé, bases de données, POO, projets en équipe
+            </p>
+          </VerticalTimelineElement>
+
+          {/* BUT 1 */}
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2023 - 2024"
+            iconStyle={{ background: '#2196F3', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faGraduationCap} />}
+          >
+            <h3 className="vertical-timeline-element-title">BUT Informatique - 1ère année</h3>
+            <h4 className="vertical-timeline-element-subtitle">IUT de Blagnac</h4>
+            <p>
+              Fondamentaux : programmation, algorithmique, web, bases de données
+            </p>
+          </VerticalTimelineElement>
+
+          {/* Bac */}
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="2023"
+            iconStyle={{ background: '#4CAF50', color: '#fff' }}
+            icon={<FontAwesomeIcon icon={faGraduationCap} />}
+          >
+            <h3 className="vertical-timeline-element-title">Baccalauréat Général - Mention Bien</h3>
+            <h4 className="vertical-timeline-element-subtitle">Lycée Antoine Bourdelle, Montauban</h4>
+            <p>
+              Spécialités : Mathématiques, NSI
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

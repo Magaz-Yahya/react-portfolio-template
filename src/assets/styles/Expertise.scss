@@ -5,19 +5,56 @@
     text-align: left;
 
     svg {
-        color: white;
+        color: #5000ca;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        margin-bottom: 0.5rem;
     }
 }
   
 .skills-container .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 40px;
+    margin-top: 2rem;
 }
   
 .skills-container .skills-grid .skill {
     align-items: center;
     text-align: left;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-5px);
+        border-color: #5000ca;
+    }
+
+    h3 {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    p {
+        line-height: 1.6;
+        opacity: 0.9;
+
+        a {
+            color: #5000ca;
+            text-decoration: underline;
+            
+            &:hover {
+                color: #6b1adb;
+            }
+        }
+    }
 }
   
 .chip {
@@ -27,7 +64,7 @@
     height: 25px !important;
   
     span {
-        font-family: 'Courier Prime', monospace;
+        font-family: 'Open Sans', sans-serif;
         color: rgb(39, 40, 34);
     }
   
@@ -39,21 +76,23 @@
 .flex-chips {
     line-height: 2;
     margin: 0.5;
+    margin-top: 1rem;
 
     .chip-title {
         color: white;
         padding-right: 10px;
+        font-weight: 600;
     }
 }
 
 .flex-chips .MuiChip-root {
     margin-right: 0.5em;
+    margin-bottom: 0.3em;
 }
 
 .flex-chips .MuiChip-outlined {
     background-color: #e0e0e0;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .flex-chips .MuiChip-outlined span {
@@ -61,6 +100,12 @@
 }
 
 @media screen {
+    @media (max-width: 1024px) {
+        .skills-container .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
     @media (max-width: 768px) {
         .skills-container {
             display: block;
@@ -69,11 +114,12 @@
         }
     
         .skills-container .skills-grid {
-            display: initial;
+            display: grid;
+            grid-template-columns: 1fr;
         }
         
         .skills-container .skills-grid .skill {
-            padding-bottom: 5%;
+            margin-bottom: 20px;
         }
     }
 

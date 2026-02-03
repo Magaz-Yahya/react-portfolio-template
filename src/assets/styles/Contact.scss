@@ -1,31 +1,107 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+/* Section CV */
+.cv-section {
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+}
+
+.cv-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #5000ca;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  svg {
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background: #6b1adb;
+    transform: translateY(-2px);
+    color: white;
+  }
+}
+
+.cv-note {
+  margin-top: 1.5rem;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* Formulaire de contact */
+.contact_wrapper {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  svg {
+    font-size: 1em;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
 }
 
 .contact-form {
   padding-top: 20px;
+  max-width: 700px;
+  margin: 0 auto;
 
   button {
     float: right;
-    background-color: white;
-    color: #050f0b;
+    background-color: #5000ca;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
   }
 
   button:hover {
-    background-color: #5000ca;
+    background-color: #6b1adb;
     color: white;
+    transform: translateY(-2px);
   }
 
   fieldset {
     background-color: white;
+    border-radius: 8px;
   }
 }
 
 label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .form-flex {
@@ -45,4 +121,17 @@ form {
 .body-form {
   width: 100% !important;
   margin-bottom: 15px !important;
+}
+
+@media screen {
+  @media (max-width: 600px) {
+    .form-flex {
+      flex-direction: column;
+    }
+
+    .cv-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
