@@ -116,8 +116,8 @@ function BilanCompetences() {
             <div className="bilan-objectif">
                 <h3>Mon objectif</h3>
                 <p>
-                    Me spécialiser en <strong>gestion de projet IT</strong> après mon diplôme, 
-                    en poursuivant vers un Master ou une école d'ingénieur.
+                    Poursuivre en <strong>Master MIAGE</strong> pour me spécialiser en gestion de projet IT 
+                    et management des systèmes d'information.
                 </p>
             </div>
         </div>
