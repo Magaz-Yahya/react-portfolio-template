@@ -18,9 +18,9 @@ const drawerWidth = 240;
 const navItems = [
   ['Accueil', 'accueil'],
   ['Compétences', 'competences'],
-  ['Projets', 'projets'],
+  ['Évolution', 'bilan'],
   ['Parcours', 'parcours'],
-  ['CV', 'cv'],
+  ['Projets', 'projets'],
   ['Contact', 'contact']
 ];
 

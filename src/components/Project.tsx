@@ -48,7 +48,7 @@ function Project() {
                 <div className="project-context">
                     <p><strong>Contexte :</strong> Projet personnel de développement de jeux</p>
                     <p><strong>Besoin :</strong> Recréer Bomberman en 3D avec fonctionnalités multijoueur</p>
-                    <p><strong>Solution :</strong> Développement complet sur Godot avec physique et IA</p>
+                    <p><strong>Solution :</strong> Développement complet sur Godot</p>
                     <p><strong>Résultat :</strong> Jeu jouable avec plusieurs niveaux et modes de jeu</p>
                 </div>
                 <div className="project-skills">

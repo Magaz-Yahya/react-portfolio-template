@@ -41,7 +41,7 @@ function Contact() {
           <h1>Mon CV</h1>
           <p>Téléchargez mon CV pour découvrir mon parcours complet.</p>
           <div className="cv-buttons">
-            <a href="/Yahya_MAGAZ_CV.pdf" download className="cv-download-btn">
+            <a href="/react-portfolio-template/Yahya_MAGAZ_CV.pdf" download className="cv-download-btn">
               <DownloadIcon /> Télécharger mon CV (PDF)
             </a>
           </div>

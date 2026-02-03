@@ -43,6 +43,21 @@ footer {
         opacity: 0.9;
     }
 
+    .github-repo {
+        margin-bottom: 1rem;
+        
+        a {
+            color: #5000ca;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
     .footer-note {
         font-size: 0.85rem;
         opacity: 0.7;
