@@ -12,7 +12,7 @@ function BilanCompetences() {
             <div className="competences-grid">
                 {/* Développement */}
                 <div className="competence-card">
-                    <h3>💻 Développement</h3>
+                    <h3>Développement</h3>
                     <div className="evolution-bar">
                         <div className="year">1ère année</div>
                         <div className="progress-track">
@@ -39,7 +39,7 @@ function BilanCompetences() {
 
                 {/* Gestion de Projet */}
                 <div className="competence-card highlight">
-                    <h3>📋 Gestion de Projet</h3>
+                    <h3>Gestion de Projet</h3>
                     <div className="evolution-bar">
                         <div className="year">1ère année</div>
                         <div className="progress-track">
@@ -66,7 +66,7 @@ function BilanCompetences() {
 
                 {/* Qualité */}
                 <div className="competence-card">
-                    <h3>✅ Qualité Logicielle</h3>
+                    <h3>Qualité Logicielle</h3>
                     <div className="evolution-bar">
                         <div className="year">1ère année</div>
                         <div className="progress-track">
@@ -93,7 +93,7 @@ function BilanCompetences() {
 
                 {/* Communication */}
                 <div className="competence-card">
-                    <h3>🗣️ Communication</h3>
+                    <h3>Communication</h3>
                     <div className="evolution-bar">
                         <div className="year">2ème année</div>
                         <div className="progress-track">
@@ -114,7 +114,7 @@ function BilanCompetences() {
 
             {/* Objectif */}
             <div className="bilan-objectif">
-                <h3>🎯 Mon objectif</h3>
+                <h3>Mon objectif</h3>
                 <p>
                     Me spécialiser en <strong>gestion de projet IT</strong> après mon diplôme, 
                     en poursuivant vers un Master ou une école d'ingénieur.

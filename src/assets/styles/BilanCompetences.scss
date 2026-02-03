@@ -3,12 +3,13 @@
     
     h1 {
         margin-bottom: 0.5rem;
+        color: #1a1a2e;
     }
 
     .section-intro {
         margin-bottom: 2rem;
         font-size: 1.1rem;
-        opacity: 0.9;
+        color: #333;
     }
 }
 
@@ -19,10 +20,10 @@
 }
 
 .competence-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: #f8f9fa;
     border-radius: 12px;
     padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #e0e0e0;
     transition: all 0.3s ease;
 
     &:hover {
@@ -38,6 +39,7 @@
     h3 {
         margin: 0 0 1rem;
         font-size: 1.2rem;
+        color: #1a1a2e;
     }
 }
 
@@ -51,13 +53,13 @@
     .year {
         width: 80px;
         flex-shrink: 0;
-        color: rgba(255, 255, 255, 0.7);
+        color: #555;
     }
 
     .progress-track {
         flex: 1;
         height: 8px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.1);
         border-radius: 4px;
         overflow: hidden;
     }
@@ -73,7 +75,7 @@
         width: 100px;
         text-align: right;
         font-weight: 500;
-        color: rgba(255, 255, 255, 0.9);
+        color: #333;
     }
 
     &.current {
@@ -90,7 +92,7 @@
 .proof {
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #555;
 
     a {
         color: #5000ca;
@@ -118,6 +120,7 @@
     p {
         margin: 0;
         font-size: 1.05rem;
+        color: #333;
         
         strong {
             color: #5000ca;
