@@ -2,6 +2,7 @@ import React from "react";
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import '../assets/styles/Main.scss';
+import photoProfil from '../assets/images/photo-profil.jpg';
 
 function Main() {
 
@@ -9,10 +10,7 @@ function Main() {
     <div className="container" id="accueil">
       <div className="about-section">
         <div className="image-wrapper">
-          {/* Ajoutez votre photo dans src/assets/images/photo-profil.jpg */}
-          <div className="photo-placeholder">
-            <span>YM</span>
-          </div>
+          <img src={photoProfil} alt="Yahya MAGAZ" />
         </div>
         <div className="content">
           <div className="social_icons">
